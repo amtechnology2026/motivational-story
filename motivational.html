@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>মোটিভেশনাল কাহিনী - আলিনুর ইসলাম</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=SolaimanLipi&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'SolaimanLipi', Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.6);
+      max-width: 700px;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2.8rem;
+      color: #f7b733;
+      text-shadow: 2px 2px 8px #000;
+    }
+
+    p.story {
+      font-size: 1.3rem;
+      line-height: 1.8;
+      text-align: justify;
+      margin-bottom: 30px;
+    }
+
+    button {
+      background: #f7b733;
+      border: none;
+      color: #222;
+      font-weight: bold;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      box-shadow: 0 4px 15px rgba(247, 183, 51, 0.6);
+    }
+
+    button:hover {
+      background: #e5a823;
+    }
+
+    #quote {
+      margin-top: 25px;
+      font-style: italic;
+      font-size: 1.5rem;
+      color: #ffd54f;
+      min-height: 60px;
+      transition: opacity 0.4s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>একটি অনুপ্রেরণামূলক গল্প</h1>
+
+    <p class="story" id="storyText">
+      বহু বছর আগে এক ছোট্ট গ্রামে এক তরুণ ছিলো যার নাম ছিলো আলিনুর। সে খুবই সাধারন একজন ছেলে, কিন্তু তার মধ্যে ছিলো অদম্য ইচ্ছাশক্তি। কঠিন পরিশ্রম ও অধ্যাবসায়ের মাধ্যমে সে ধীরে ধীরে তার স্বপ্নের দিকে এগিয়ে চলল। মানুষের অবহেলা ও ব্যর্থতাকে জয় করে সে নিজের ক্যারিয়ার গড়ে তুলল, এবং প্রমাণ করল যে, ইচ্ছা থাকলে পথ খুঁজে পাওয়া যায়। তুমি ও পারবে, শুধু চাইনা হার মানতে।
+    </p>
+
+    <button onclick="showQuote()">অনুপ্রেরণা পেতে ক্লিক করো</button>
+
+    <div id="quote"></div>
+  </div>
+
+  <script>
+    const quotes = [
+      "“কঠিন পরিশ্রম কখনো বৃথা যায় না।” – আলিনুর ইসলাম",
+      "“স্বপ্ন দেখা শুরু, এবং সেগুলো পূরণ করাই জীবনের সার্থকতা।”",
+      "“ব্যর্থতা হলো সাফল্যের পথে একমাত্র সিঁড়ি।”",
+      "“নিজের ওপর বিশ্বাস রাখো, জগৎ তোমার জন্য অপেক্ষা করছে।”",
+      "“আজকের পরিশ্রম আগামীকালের বিজয়।”"
+    ];
+
+    function showQuote() {
+      const quoteDiv = document.getElementById('quote');
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      quoteDiv.style.opacity = 0;
+
+      setTimeout(() => {
+        quoteDiv.textContent = quotes[randomIndex];
+        quoteDiv.style.opacity = 1;
+      }, 400);
+    }
+  </script>
+
+</body>
+</html>
